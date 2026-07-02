@@ -69,12 +69,22 @@
     width:46px;height:46px;flex:0 0 46px;border-radius:50%;
     background:var(--bg);display:grid;place-items:center;
     border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);
+    overflow:hidden;
   }
   .crest svg{width:30px;height:30px}
+  .crest img{width:100%;height:100%;object-fit:contain;border-radius:50%}
   .brand b{font-family:'Cinzel',serif;font-size:1.02rem;letter-spacing:1px;display:block;line-height:1.1}
   .brand span{font-size:.72rem;opacity:.85;letter-spacing:2px;text-transform:uppercase}
   .jp-tag{margin-left:auto;font-family:'Noto Sans JP',sans-serif;font-weight:900;
     font-size:1.1rem;opacity:.5;letter-spacing:3px}
+
+  /* ====== LOGO menggantikan kanji ====== */
+  .jp-logo{height:18px;width:auto;vertical-align:middle;object-fit:contain;border-radius:4px}
+  .jp-logo-tag{height:26px;width:auto;object-fit:contain;opacity:.7;border-radius:4px}
+  .jp-logo-badge{height:16px;width:auto;object-fit:contain;border-radius:3px}
+  .jp-logo-panel{height:26px;width:auto;object-fit:contain;vertical-align:middle;border-radius:4px}
+  .jp-logo-big{height:44px;width:auto;object-fit:contain;border-radius:6px}
+  .jp-logo-ring{width:70%;height:70%;object-fit:contain;border-radius:50%}
 
   /* ====== LOGIN ====== */
   .login-wrap{min-height:100vh;display:grid;place-items:center;padding:30px 18px}
@@ -91,13 +101,16 @@
   }
   .login-card{width:100%;max-width:430px;padding:42px 38px 38px;text-align:center}
   .seal{
-    width:88px;height:88px;margin:0 auto 14px;border-radius:50%;
-    background:linear-gradient(135deg,var(--red),var(--red-deep));
+    width:170px;height:170px;margin:0 auto 20px;border-radius:50%;
+    background:#fff;
     display:grid;place-items:center;
     box-shadow:0 10px 26px var(--shadow);
-    border:3px solid var(--bg);
+    border:4px solid var(--bg);
+    overflow:hidden;
+    padding:14px;
   }
   .seal svg{width:54px;height:54px}
+  .seal img{width:100%;height:100%;object-fit:contain;border-radius:50%}
   .jp-sub{font-family:'Noto Sans JP',sans-serif;color:var(--red);font-weight:700;
     letter-spacing:6px;font-size:.85rem;margin-bottom:4px}
   .login-card h1{
@@ -367,17 +380,9 @@
   <div class="login-wrap">
     <div class="card login-card">
       <div class="seal">
-        <!-- helm samurai (kabuto) -->
-        <svg viewBox="0 0 64 64" fill="none">
-          <path d="M32 8C18 8 9 18 8 30c-1 8 3 14 6 16h36c3-2 7-8 6-16C55 18 46 8 32 8Z" fill="#F5C518"/>
-          <path d="M32 8C18 8 9 18 8 30c10-4 18-5 24-5s14 1 24 5C55 18 46 8 32 8Z" fill="#FFE07A"/>
-          <path d="M32 14c-3 6-3 12 0 18 3-6 3-12 0-18Z" fill="#B11116"/>
-          <path d="M20 16c0 8 4 14 12 14s12-6 12-14" stroke="#B11116" stroke-width="2.4" fill="none"/>
-          <circle cx="32" cy="33" r="4" fill="#B11116"/>
-          <path d="M14 46h36v4a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4v-4Z" fill="#F5C518"/>
-        </svg>
+        <!-- Logo ARSANA -->
+        <img src="logo-arsana.png" alt="Logo ARSANA" onerror="this.style.display='none'">
       </div>
-      <div class="jp-sub">決戦 · ARSANA</div>
       <h1>RONDE FINAL<br>KETUA ANGKATAN</h1>
       <p class="desc">Pertarungan penentu dua finalis Ketua Angkatan ARSANA</p>
 
@@ -399,26 +404,22 @@
 <section id="screen-ketang" class="screen">
   <div class="topbar">
     <div class="crest">
-      <svg viewBox="0 0 64 64" fill="none">
-        <path d="M32 8C20 8 12 16 11 27c-1 7 2 12 5 15h32c3-3 6-8 5-15C52 16 44 8 32 8Z" fill="#B11116"/>
-        <path d="M32 16c-2 5-2 10 0 15 2-5 2-10 0-15Z" fill="#F5C518"/>
-        <circle cx="32" cy="30" r="3.5" fill="#F5C518"/>
-      </svg>
+      <img src="logo-arsana.png" alt="Logo ARSANA" onerror="this.style.display='none'">
     </div>
     <div class="brand"><b>BADAN ANGKATAN ARSANA</b><span>Ronde Final · Ketua Angkatan</span></div>
-    <div class="jp-tag">決戦</div>
+    <div class="jp-tag"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-tag" onerror="this.style.display='none'"></div>
   </div>
 
   <div class="container">
     <div class="finalbar">
       <span class="line"></span>
-      <span class="badge"><span class="jp">最終決戦</span><span class="big">RONDE FINAL</span></span>
+      <span class="badge"><span class="jp"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-badge" onerror="this.style.display='none'"></span><span class="big">RONDE FINAL</span></span>
       <span class="line r"></span>
     </div>
 
     <div class="panel">
       <div class="panel-head">
-        <span class="kanji-badge">将</span>
+        <span class="kanji-badge"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-panel" onerror="this.style.display='none'"></span>
         <h2>Penentuan Ketua Angkatan</h2>
       </div>
       <p class="sub">Dua finalis tersisa. Pilih satu (1) untuk menjadi Ketua Angkatan ARSANA. Pilihan tidak dapat diubah setelah disubmit.</p>
@@ -437,14 +438,10 @@
 <section id="screen-done" class="screen">
   <div class="topbar">
     <div class="crest">
-      <svg viewBox="0 0 64 64" fill="none">
-        <path d="M32 8C20 8 12 16 11 27c-1 7 2 12 5 15h32c3-3 6-8 5-15C52 16 44 8 32 8Z" fill="#B11116"/>
-        <path d="M32 16c-2 5-2 10 0 15 2-5 2-10 0-15Z" fill="#F5C518"/>
-        <circle cx="32" cy="30" r="3.5" fill="#F5C518"/>
-      </svg>
+      <img src="logo-arsana.png" alt="Logo ARSANA" onerror="this.style.display='none'">
     </div>
     <div class="brand"><b>BADAN ANGKATAN ARSANA</b><span>Ronde Final · Ketua Angkatan</span></div>
-    <div class="jp-tag">決戦</div>
+    <div class="jp-tag"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-tag" onerror="this.style.display='none'"></div>
   </div>
 
   <div class="done-wrap">
@@ -455,7 +452,7 @@
           <path d="M20 33l8 8 16-18" stroke="#F5C518" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="jp-sub">感謝 · ARIGATO</div>
+      <div class="jp-sub"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo" onerror="this.style.display='none'"> · ARIGATO</div>
       <h2>Suara Final Tercatat!</h2>
       <p>Terima kasih telah menentukan pemenang pada <b>Ronde Final Ketua Angkatan ARSANA</b>.</p>
       <p>Satu suara Anda menentukan siapa yang memimpin angkatan.</p>
@@ -470,7 +467,7 @@
 <!-- ============ CONFIRM MODAL ============ -->
 <div class="overlay" id="overlay">
   <div class="modal">
-    <div class="kanji-big">決</div>
+    <div class="kanji-big"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-big" onerror="this.style.display='none'"></div>
     <h3>Konfirmasi Suara</h3>
     <p>Apakah Anda yakin dengan pilihan Anda?</p>
     <div class="summary" id="summaryBox"></div>
@@ -489,19 +486,76 @@
 // >>> GANTI dengan URL Web App dari Google Apps Script (Langkah 3 tutorial)
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8KwzfnoU8XRUYRVuy7zMBjbpXMSyrLAoWW34tDaL0Uo_zXn6ty1PRLT7oPUwrTibh0g/exec';
 
-const VALID_TOKEN = '9181';
+const VALID_TOKEN = '7030';
 
-// Pemetaan 6 digit awal NIM -> prodi (untuk verifikasi kelayakan pemilih)
+// Pemetaan 6 digit awal NIM -> prodi (untuk menampilkan info prodi pemilih)
 const PRODI_MAP = {
   '411125': 'MAP',
   '411225': 'MKN',
   '411325': 'ASP'
 };
 
-// Dua finalis Ketua Angkatan -- ganti nama sesuai hasil ronde 1
+// Daftar NIM yang diizinkan masuk (sesuai lampiran). Hanya NIM pada
+// daftar ini yang dapat login -- di luar daftar akan ditolak.
+const VALID_NIM = [
+  '4111250001','4111250002','4111250003','4111250004','4111250005','4111250006','4111250007','4111250008','4111250009','4111250010',
+  '4111250011','4111250012','4111250013','4111250014','4111250015','4111250016','4111250017','4111250018','4111250019','4111250020',
+  '4111250021','4111250022','4111250023','4111250024','4111250025','4111250026','4111250027','4111250028','4111250029','4111250030',
+  '4111250031','4111250032','4111250033','4111250034','4111250035','4111250036','4111250037','4111250038','4111250039','4111250040',
+  '4111250041','4111250042','4111250043','4111250044','4111250045','4111250046','4111250047','4111250048','4111250049','4111250050',
+  '4111250051','4111250052','4111250053','4111250054','4111250055','4111250056','4111250057','4111250058','4111250059','4111250061',
+  '4111250062','4111250063','4111250064','4111250065','4111250066','4111250067','4111250068','4111250069','4111250070','4111250071',
+  '4111250072','4111250073','4111250074','4111250075','4111250076','4111250077','4111250078','4111250079','4111250080','4112250000',
+  '4112250001','4112250002','4112250003','4112250004','4112250005','4112250006','4112250007','4112250008','4112250009','4112250010',
+  '4112250011','4112250012','4112250013','4112250014','4112250015','4112250016','4112250017','4112250018','4112250019','4112250020',
+  '4112250021','4112250022','4112250023','4112250024','4112250025','4112250026','4112250027','4112250028','4112250029','4112250030',
+  '4112250031','4112250032','4112250033','4112250034','4112250035','4112250036','4112250037','4112250038','4112250039','4112250040',
+  '4112250041','4112250042','4112250043','4112250044','4112250045','4112250046','4112250047','4112250048','4112250049','4112250050',
+  '4112250051','4112250052','4112250053','4112250054','4112250055','4112250056','4112250057','4112250058','4112250059','4112250060',
+  '4112250061','4112250062','4112250063','4112250064','4112250065','4112250066','4112250067','4112250068','4112250069','4112250070',
+  '4112250071','4112250072','4112250073','4112250074','4112250075','4112250076','4112250077','4112250078','4112250079','4112250080',
+  '4112250081','4112250082','4112250083','4112250084','4112250085','4112250086','4112250087','4112250088','4112250089','4112250090',
+  '4112250091','4112250092','4112250093','4112250094','4112250095','4112250096','4112250097','4112250098','4112250099','4112250100',
+  '4112250101','4112250102','4112250103','4112250104','4112250105','4112250106','4112250107','4112250108','4112250109','4112250110',
+  '4112250111','4112250112','4112250113','4112250114','4112250115','4112250116','4112250117','4112250119','4112250120','4112250121',
+  '4112250122','4112250123','4112250124','4112250125','4112250126','4112250127','4112250128','4112250129','4112250130','4112250131',
+  '4112250132','4112250133','4112250134','4112250135','4112250136','4112250137','4112250138','4112250139','4112250140','4112250141',
+  '4112250142','4112250143','4112250144','4112250145','4112250146','4112250147','4112250148','4112250149','4112250150','4112250151',
+  '4112250152','4112250153','4112250154','4112250155','4112250156','4112250157','4112250158','4112250159','4112250160','4112250161',
+  '4112250162','4112250163','4112250164','4112250165','4112250166','4112250167','4112250168','4112250169','4112250171','4112250172',
+  '4112250173','4112250174','4112250175','4112250176','4112250177','4112250178','4112250179','4112250180','4112250181','4112250182',
+  '4112250183','4112250184','4112250185','4112250186','4112250187','4112250188','4112250189','4112250190','4112250191','4112250192',
+  '4112250193','4112250194','4112250195','4112250196','4112250197','4112250198','4112250199','4112250200','4112250201','4112250202',
+  '4112250203','4112250204','4112250205','4112250206','4112250207','4112250208','4112250209','4112250210','4112250211','4112250212',
+  '4112250213','4112250214','4112250215','4112250216','4112250217','4112250218','4112250219','4112250220','4112250221','4112250222',
+  '4112250223','4112250224','4112250225','4112250226','4112250227','4112250228','4112250229','4112250230','4112250231','4112250232',
+  '4112250233','4112250234','4112250235','4112250236','4112250237','4112250238','4112250239','4112250240','4112250241','4112250242',
+  '4112250243','4112250244','4112250245','4112250246','4112250247','4112250248','4112250249','4112250250','4112250251','4112250252',
+  '4112250253','4112250254','4112250255','4112250256','4112250257','4112250258','4112250259','4112250260','4112250261','4112250262',
+  '4112250263','4112250264','4112250265','4112250266','4112250267','4112250268','4112250269','4112250270','4112250271','4112250272',
+  '4112250273','4112250274','4112250275','4112250276','4112250277','4112250278','4112250279','4112250280','4112250281','4112250282',
+  '4112250283','4112250284','4112250285','4112250286','4112250287','4112250288','4112250289','4112250290','4112250291','4112250292',
+  '4112250293','4112250294','4112250295','4112250296','4112250297','4112250298','4113250000','4113250001','4113250002','4113250003',
+  '4113250004','4113250005','4113250006','4113250007','4113250008','4113250009','4113250010','4113250011','4113250012','4113250013',
+  '4113250014','4113250015','4113250016','4113250017','4113250018','4113250019','4113250020','4113250021','4113250022','4113250023',
+  '4113250024','4113250025','4113250026','4113250027','4113250028','4113250029','4113250030','4113250031','4113250032','4113250033',
+  '4113250034','4113250035','4113250036','4113250037','4113250038','4113250039','4113250040','4113250041','4113250042','4113250043',
+  '4113250044','4113250045','4113250046','4113250047','4113250048','4113250049','4113250050','4113250051','4113250052','4113250053',
+  '4113250054','4113250055','4113250056','4113250057','4113250058','4113250060','4113250061','4113250062','4113250063','4113250064',
+  '4113250065','4113250067','4113250068','4113250069','4113250070','4113250071','4113250072','4113250073','4113250074','4113250075',
+  '4113250076','4113250077','4113250078','4113250079','4113250080','4113250081','4113250082','4113250083','4113250084','4113250085',
+  '4113250086','4113250087','4113250088','4113250089','4113250090','4113250092','4113250093','4113250094','4113250095','4113250096',
+  '4113250097','4113250098','4113250099','4113250100','4113250101','4113250102','4113250103','4113250104','4113250105','4113250106',
+  '4113250107','4113250108','4113250109','4113250110','4113250111','4113250112','4113250113','4113250114','4113250115','4113250116',
+  '4113250117','4113250118','4113250120','4113259999',
+];
+
+// Dua finalis Ketua Angkatan -- ganti nama & foto sesuai hasil ronde 1
+// Letakkan file foto (format .png) satu folder dengan index.html ini,
+// dengan nama persis seperti pada properti "foto" di bawah.
 const KETANG = [
-  { no:1, nama:'Finalis 1', cls:'Calon Ketua Angkatan' },
-  { no:2, nama:'Finalis 2', cls:'Calon Ketua Angkatan' }
+  { no:1, nama:'Finalis 1', cls:'Calon Ketua Angkatan', foto:'foto-finalis-1.png' },
+  { no:2, nama:'Finalis 2', cls:'Calon Ketua Angkatan', foto:'foto-finalis-2.png' }
 ];
 
 /* =====================================================================
@@ -554,16 +608,16 @@ function doLogin(){
     err.textContent = 'NIM harus terdiri dari 10 digit angka.';
     return;
   }
+  if(!VALID_NIM.includes(nim)){
+    err.textContent = 'NIM tidak terdaftar pada daftar pemilih. Hubungi panitia jika Anda merasa ini keliru.';
+    return;
+  }
   if(token !== VALID_TOKEN){
     err.textContent = 'Token salah. Silakan periksa kembali.';
     return;
   }
   const prefix = nim.substring(0,6);
-  const prodi = PRODI_MAP[prefix];
-  if(!prodi){
-    err.textContent = 'NIM tidak terdaftar pada angkatan ini.';
-    return;
-  }
+  const prodi = PRODI_MAP[prefix] || '-';
 
   state.nim = nim;
   state.prodi = prodi;
@@ -577,9 +631,12 @@ function doLogin(){
    RENDER DUEL (2 FINALIS)
    ===================================================================== */
 function fighter(item, side, selected){
+  const photo = item.foto
+    ? `<img src="${item.foto}" alt="${item.nama}" style="width:100%;height:100%;object-fit:cover" onerror="this.replaceWith(document.createRange().createContextualFragment('${AVATAR_SVG.replace(/'/g,"\\'")}'))">`
+    : AVATAR_SVG;
   return `<div class="fighter ${side}${selected?' sel':''}" data-no="${item.no}">
     <span class="num">No. ${item.no}</span>
-    <div class="avatar">${AVATAR_SVG}</div>
+    <div class="avatar">${photo}</div>
     <div class="nm">${item.nama}</div>
     <div class="cls">${item.cls}</div>
   </div>`;
@@ -590,7 +647,7 @@ function renderKetang(){
   const a = KETANG[0], b = KETANG[1];
   duel.innerHTML =
     fighter(a, 'left', state.ketang===a.no) +
-    `<div class="vs"><span class="ring"><span class="jp">決</span></span><span class="lbl">VS</span></div>` +
+    `<div class="vs"><span class="ring"><img src="logo-arsana.png" alt="ARSANA" class="jp-logo-ring" onerror="this.style.display='none'"></span><span class="lbl">VS</span></div>` +
     fighter(b, 'right', state.ketang===b.no);
   duel.querySelectorAll('.fighter').forEach(el=>{
     el.onclick = ()=>{ state.ketang = +el.dataset.no; renderKetang(); };
